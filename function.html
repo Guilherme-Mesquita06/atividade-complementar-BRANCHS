@@ -34,6 +34,17 @@
     }
 
     function maiorQue() {
+        res.innerHTML = ''
+        
+        if (alunos.length > 0) {
+            let notaRef = Number(prompt('Informe a nota limite:'))
+
+            for (let i = 0; i < alunos.length; i++) {
+                if (alunos[i].notaUm > notaRef || alunos[i].notaDois > notaRef || alunos[i].notaTres > notaRef) {
+                    res.innerHTML += `<br> Aluno: ${alunos[i].nome} – N1: ${alunos[i].notaUm} – N2: ${alunos[i].notaDois} – N3: ${alunos[i].notaTres} – Média: ${alunos[i].mediaAluno} – Pelo menos uma nota maior que ${notaRef} <br>`
+                }
+            }
+        }
     }
 </script>
 
