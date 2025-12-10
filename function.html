@@ -31,6 +31,36 @@
     }
 
     function lsmedia() {
+        if (alunos.length > 0) {
+            let resultMedia = prompt('Deseja ver a maior média ou a menor média?')
+            let menorMedia = 10
+            let maiorMedia = 0
+            let indexResult = 0
+
+            while (resultMedia != 'maior' && resultMedia != 'menor' && resultMedia != 'Maior' && resultMedia != 'Menor') {
+                resultMedia = prompt('Deseja ver a maior média ou a menor média?')
+            }
+
+            if (resultMedia == 'Maior' || resultMedia == 'maior') {
+                for (let i = 0; i < alunos.length; i++) {
+                    if (alunos[i].mediaAluno > maiorMedia) {
+                        maiorMedia = alunos[i].mediaAluno
+                        indexResult = i
+                    }
+                }
+
+                res.innerHTML = `<br>Aluno: ${alunos[indexResult].nome} – N1: ${alunos[indexResult].notaUm} – N2: ${alunos[indexResult].notaDois} – N3: ${alunos[indexResult].notaTres} – Média: ${alunos[indexResult].mediaAluno} – Maior média cadastrada <br>`
+            } else {
+                for (let i = 0; i < alunos.length; i++) {
+                    if (alunos[i].mediaAluno < menorMedia) {
+                        menorMedia = alunos[i].mediaAluno
+                        indexResult = i
+                    }
+                }
+
+                res.innerHTML = `<br>Aluno: ${alunos[indexResult].nome} – N1: ${alunos[indexResult].notaUm} – N2: ${alunos[indexResult].notaDois} – N3: ${alunos[indexResult].notaTres} – Média: ${alunos[indexResult].mediaAluno} – Menor média cadastrada <br>`
+            }
+        }
     }
 
     function maiorQue() {
