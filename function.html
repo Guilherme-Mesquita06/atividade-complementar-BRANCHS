@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operações matematicas</h1>
+    <h3>Soma</h3>
+   <p>Primeiro valor</p> <input id="iptNumber">
+    <p>Segundo Valor</p> <input id="iptNumber2">
+    <button onclick="realizarSoma()">Soma</button>
+    
+</body>
+<script>
+    function somar (x , y){
+      const soma = x + y;
+      return soma;
+    }
+    function realizarSoma (){
+     var num1 = Number(iptNumber.value);
+     var num2 = Number(iptNumber2.value)
+
+     somar(num1, num2);
+
+     console.log('O resultado é: ', soma)
+
+    }
+</script>
+</html>
