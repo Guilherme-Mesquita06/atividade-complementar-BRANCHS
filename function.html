@@ -25,6 +25,28 @@
     }
 
     function list() {
+        if (alunos.length > 0) {
+            let ordem = prompt('Digite 1 para listar do primeiro ao último | Digite 2 para listar do último ao primeiro')
+            let media = 0
+
+            while (ordem != 1 && ordem != 2) {
+                ordem = prompt('Digite 1 para listar do primeiro ao último | Digite 2 para listar do último ao primeiro')
+            }
+
+            if (ordem == 1) {
+                res.innerHTML = ''
+                for (let i = 0; i < alunos.length; i++) {
+
+                    res.innerHTML += `<br> Aluno: ${alunos[i].nome} – N1: ${alunos[i].notaUm} – N2: ${alunos[i].notaDois} – N3: ${alunos[i].notaTres} Média: ${alunos[i].mediaAluno} – Listando do primeiro ao último <br>`
+                }
+            } else {
+                res.innerHTML = ''
+                for (let i = alunos.length - 1; i >= 0; i--) {
+
+                    res.innerHTML += `<br>Aluno: ${alunos[i].nome} – N1: ${alunos[i].notaUm} – N2: ${alunos[i].notaDois} – N3: ${alunos[i].notaTres} Média: ${alunos[i].mediaAluno} – Listando do último ao primeiro <br>`
+                }
+            }
+        }
     }
 
     function lsaluno() {
