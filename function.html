@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de notas da Prof. Alice</title>
 </head>
+
 <body>
-    <h1>Operações matematicas</h1>
-    <h3>Soma</h3>
-   <p>Primeiro valor</p> <input id="iptNumber">
-    <p>Segundo Valor</p> <input id="iptNumber2">
-    <button onclick="realizarSoma()">Soma</button>
-    
+    <h2>Cadastro de Notas</h2>
+    Informe o nome do aluno: <input type="text" id="ipt_nome"> <br><br>
+    Informe a primeira nota: <input type="number" name="" id="ipt_n1"> <br><br>
+    Informe a segunda nota: <input type="number" name="" id="ipt_n2"> <br><br>
+    Informe a terceira nota: <input type="number" name="" id="ipt_n3"> <br><br>
+    <button onclick="cadastro()">Cadastrar</button> <button onclick="list()">Listar</button> <button
+        onclick="lsaluno()">Aluno</button> <button onclick="lsmedia()">Média</button> <button onclick="maiorQue()">Notas
+        maior que</button><br><br>
+    <div id="res"></div>
 </body>
 <script>
-    function somar (x , y){
-      const soma = x + y;
-      return soma;
+    const alunos = []
+
+    function cadastro() {
     }
-    function realizarSoma (){
-     var num1 = Number(iptNumber.value);
-     var num2 = Number(iptNumber2.value)
 
-     somar(num1, num2);
+    function list() {
+    }
 
-     console.log('O resultado é: ', soma)
+    function lsaluno() {
+    }
 
+    function lsmedia() {
+    }
+
+    function maiorQue() {
     }
 </script>
+
 </html>
